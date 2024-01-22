@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>RP Flask REST API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <h1>
         Hello, People!
@@ -18,5 +21,10 @@
         {% endfor %}
     </ul>
     {% endfor %}
+
+    {% if config['DEBUG'] %}
+    {% include "_debug.html" %}
+    {% endif %}
 </body>
+
 </html>
